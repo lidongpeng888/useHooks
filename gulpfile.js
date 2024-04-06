@@ -25,7 +25,7 @@ gulp.task('es', function () {
     module: 'ESNext',
   });
   // tsc 读取配置 进行babel编译react，将结果输入到 创建的es/目录
-  console.log(tsProject);
+  // console.log(tsProject);
   return tsProject.src().pipe(tsProject()).pipe(babel()).pipe(gulp.dest('es/'));
 });
 //产出声明文件
