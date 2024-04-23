@@ -4,7 +4,7 @@ const packages = require('../packages/hooks/package.json');
 
 export default {
   exportStatic: {},
-  publicPath: '/usehooks/',
+  // publicPath: '/usehooks/',
   nodeModulesTransform: {
     type: 'none',
     exclude: [],
