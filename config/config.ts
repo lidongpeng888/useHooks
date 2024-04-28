@@ -1,5 +1,5 @@
 import { menus } from './hooks';
-
+import { uimenus } from './ui';
 const packages = require('../packages/hooks/package.json');
 
 export default {
@@ -22,7 +22,7 @@ export default {
     ],
   ],
   mode: 'site',
-  title: 'my react hooks',
+  title: '组件库',
   // favicon: '/avatar.png',
   // logo: '/logo.png',
   dynamicImport: {},
@@ -31,9 +31,10 @@ export default {
   alias: {
     encodeHooks: process.cwd() + '/packages/hooks/src/index.ts',
     'encode-hooks': process.cwd() + '/packages/hooks/src/index.ts',
+    uiComponents: process.cwd() + '/packages/uiComponents/src/index.ts',
   },
   resolve: {
-    includes: ['docs', 'packages/hooks/src'],
+    includes: ['docs', 'packages/hooks/src', 'packages/uiComponents/src'],
   },
   links: [
     {
@@ -45,6 +46,7 @@ export default {
   navs: [
     // { title: '指南', path: '/guide' },
     { title: 'Hooks', path: '/hooks' },
+    { title: '组件', path: '/ui' },
   ],
   menus: {
     '/': [
@@ -60,5 +62,6 @@ export default {
     //   },
     // ],
     '/hooks': menus,
+    '/ui': uimenus,
   },
 };
